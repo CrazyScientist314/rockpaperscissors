@@ -27,8 +27,26 @@ $(document).ready(function(){
             $("#computerChoice").text(computerChoice[randomNumber]);
             if((userChoice === "rock" && computerChoice[randomNumber] === "scissors") || (userChoice === "scissors" && computerChoice[randomNumber] === "paper") || (userChoice === "paper" && computerChoice[randomNumber] === "rock")){
                 $("#userScore").text(userScore + 1);
+                if(userScore + 1 === 5){
+                    $(".winners").html("You Win <button id='restart'>Click to Restart!</button>");
+                    $("#restart").click(function(){
+                        $("#userScore").text("0");
+                        $("#computerScore").text("0");
+                        $("#userChoice").text("");
+                        $("#computerChoice").text("");
+                    });
+                }
             }else if((userChoice === "scissors" && computerChoice[randomNumber] === "rock") || (userChoice === "paper" && computerChoice[randomNumber] === "scissors") || (userChoice === "rock" && computerChoice[randomNumber] === "paper")){
                 $("#computerScore").text(computerScore + 1);
+                if(computerScore + 1 === 5){
+                    $(".winners").html("You Lose <button id='restart'>Click to Restart!</button>");
+                    $("#restart").click(function(){
+                        $("#userScore").text("0");
+                        $("#computerScore").text("0");
+                        $("#userChoice").text("");
+                        $("#computerChoice").text("");
+                    });
+                }
             }else{
                 $("#userScore").text(userScore);
                 $("#computerScore").text(computerScore);
@@ -37,15 +55,7 @@ $(document).ready(function(){
         }else{
             $("#input").val("");
         }
-        if(userScore === 5){
-            alert("You Win");
-        }else if(computerScore === 5){
-            alert("You Lose");
-        }else{
-            
-        }
     });
-    
     
     
     

@@ -5,3 +5,12 @@
   display: flex;
   justify-content: space-around;
 }
+.winners{
+  height: 20px;
+}
+#userChoice{
+  height: 20px;
+}
+#computerChoice{
+  height: 20px;
+}
