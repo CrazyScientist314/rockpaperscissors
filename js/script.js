@@ -34,6 +34,7 @@ $(document).ready(function(){
                         $("#computerScore").text("0");
                         $("#userChoice").text("");
                         $("#computerChoice").text("");
+                        $(".winners").text("");
                     });
                 }
             }else if((userChoice === "scissors" && computerChoice[randomNumber] === "rock") || (userChoice === "paper" && computerChoice[randomNumber] === "scissors") || (userChoice === "rock" && computerChoice[randomNumber] === "paper")){
@@ -45,6 +46,7 @@ $(document).ready(function(){
                         $("#computerScore").text("0");
                         $("#userChoice").text("");
                         $("#computerChoice").text("");
+                        $(".winners").text("");
                     });
                 }
             }else{
@@ -56,30 +58,4 @@ $(document).ready(function(){
             $("#input").val("");
         }
     });
-    
-    
-    
-    
-    
-     /*var computerInput = ["rock","paper","scissor"];
-        if(inputValue === "rock" || inputValue === "paper" || inputValue === "scissors"){
-            $("#userChoice").text(inputValue);
-            $("#computerChoice").text();
-            $("#input").val("");
-        }else{
-            $("#input").val("");*/
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 });
